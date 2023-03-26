@@ -19,12 +19,18 @@ public class Palindrome {
             else if(nm == 3){
                 break;
             }
+            System.out.println("Continue? (Y/N) ");
+            String opt = sc.next().toUpperCase();
+            if(opt.equals("N")){
+                play = false;
+                break;
+            }
         }
     }
 
     public static void Queue(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter palindrome word: ");
+        System.out.println("Enter palindrome word/number: ");
         String txt = sc.nextLine();
         Queue q = new LinkedList();
         String reverse = "";
@@ -50,7 +56,7 @@ public class Palindrome {
 
     public static void Stack(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter palindrome word: ");
+        System.out.println("Enter palindrome word/number: ");
         String txt = sc.nextLine();
         Stack s = new Stack();
         String reverse = "";
